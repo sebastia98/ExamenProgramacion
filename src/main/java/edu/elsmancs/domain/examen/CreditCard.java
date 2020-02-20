@@ -4,7 +4,7 @@ public class CreditCard {
 	
 	private String owner = null;
 	private String number = null;
-	private Double credit = 3000.0;
+	private Double credit = 3000d;
 	private String symbol = "EZIS";
 	
 	

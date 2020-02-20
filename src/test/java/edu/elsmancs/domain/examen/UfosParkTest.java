@@ -12,7 +12,16 @@ public class UfosParkTest {
      * a la flota de ufos
      */
     @Test
+    
+    /*Mirar mas tarde*/
     public void addUfoTest() {
+    	UfosPark ufosPark = new UfosPark();
+		for (String ovni : ovnis) {
+			ufosPark.add(ovni);
+			ufos.add(ovni);
+        }
+		assertArrayEquals(ufosPark.flota, ufos.flota);
+    	
     }
 
     /**

@@ -15,6 +15,15 @@ public class UfosPark {
 		
 	}
 	
+	public ArrayList<String> getUfo() {
+		return this.flota;
+	}
+
+	public void dispatch(CreditCard abradolph) {
+		
+		
+	}
+	
 	
 
 }
