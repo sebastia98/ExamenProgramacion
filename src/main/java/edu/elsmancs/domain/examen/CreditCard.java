@@ -4,9 +4,8 @@ public class CreditCard {
 	
 	private String owner = null;
 	private String number = null;
-	private Double credit = 3000d;
+	private Integer credit = 3000;
 	private String symbol = "EZIS";
-	
 	
 	public CreditCard(String nombreInvitado, String tarjetaCredito) {
 		this.owner = nombreInvitado;
@@ -21,12 +20,16 @@ public class CreditCard {
 		return this.number;
 	}
 	
-	public Double credit() {
+	public Integer credit() {
 		return credit;
 	}
 	
-	public void setCredit(Double dinero) {
+	public void setCredit(Integer dinero) {
 		this.credit = this.credit - dinero;
+	}
+	public void pay(int dinero) {
+		this.credit = this.credit() - dinero;
+		
 	}
 
 }
