@@ -10,6 +10,12 @@ public class CreditCard {
 		this.numeroTarjeta = tarjetaCredito;
 	}
 	
-	
+	/*Getters para los casos test*/
+	public String getNombre() {
+		return this.nombre;
+	}
+	public String getNumero() {
+		return this.numeroTarjeta;
+	}
 
 }
