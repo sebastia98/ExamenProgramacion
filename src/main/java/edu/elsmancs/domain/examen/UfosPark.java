@@ -24,10 +24,17 @@ public class UfosPark {
 
 	public void dispatch(CreditCard personaje) {
 		
-		if (personaje.credit() > fee || this.flotaReservas.containsValue(personaje.number())){
-			personaje.setCredit(fee);
-			this.flotaReservas.putIfAbsent(personaje.number(), this.flota.remove(0));
+		if (this.flotaReservas.containsKey(personaje.number())){
+			
+		}else {
+			if (personaje.credit() > fee){
+				personaje.setCredit(fee);
+				String idReservada = this.flota.remove(0);
+				this.flotaReservas.putIfAbsent(idReservada, personaje.number());
+			}
+			
 		}
+		
 	}
 	/*Metodo ufosOF*/
 
