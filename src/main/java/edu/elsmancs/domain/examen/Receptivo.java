@@ -8,7 +8,6 @@ public class Receptivo {
 	public Receptivo() {
 		
 	}
-	
 	public void registra(CrystalExpender packExpender) {
 		this.packExpender = packExpender;
 	}
