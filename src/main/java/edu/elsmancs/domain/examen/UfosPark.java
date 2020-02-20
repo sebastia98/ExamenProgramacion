@@ -1,11 +1,14 @@
 package edu.elsmancs.domain.examen;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class UfosPark {
 	
 	private ArrayList<String> flota = new ArrayList<String>();
-	private final Double fee = 500d;
+	private final Integer fee = 500;
+	private Map<String, String> flotaReservas = new HashMap<>();
 	
 	public UfosPark() {
 		
@@ -23,11 +26,13 @@ public class UfosPark {
 		
 		if (personaje.credit() > fee) {
 			personaje.setCredit(fee);
-			flota.remove(0);
+			this.flotaReservas.putIfAbsent(personaje.number(), this.flota.remove(0));
 		}
-		
-		
-		
+	}
+	/*Metodo ufosOF*/
+
+	public String getUfoOf(String number) {
+		return this.flotaReservas.get(number);
 	}
 	
 	
