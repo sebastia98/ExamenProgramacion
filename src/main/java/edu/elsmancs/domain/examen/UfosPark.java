@@ -4,22 +4,28 @@ import java.util.ArrayList;
 
 public class UfosPark {
 	
-	ArrayList<String> flota = new ArrayList<String>();
+	private ArrayList<String> flota = new ArrayList<String>();
+	private final Double fee = 500d;
 	
 	public UfosPark() {
 		
 	}
 
 	public void add(String ovni) {
-		flota.add(ovni);
+		this.flota.add(ovni);
 		
 	}
-	
-	public ArrayList<String> getUfo() {
+	public ArrayList<String> getFlota() {
 		return this.flota;
 	}
 
-	public void dispatch(CreditCard abradolph) {
+	public void dispatch(CreditCard personaje) {
+		
+		if (personaje.credit() > fee) {
+			personaje.setCredit(fee);
+			flota.remove(0);
+		}
+		
 		
 		
 	}

@@ -13,15 +13,12 @@ public class UfosParkTest {
      */
     @Test
     
-    /*Mirar mas tarde*/
     public void addUfoTest() {
     	UfosPark ufosPark = new UfosPark();
 		for (String ovni : ovnis) {
 			ufosPark.add(ovni);
-			ufos.add(ovni);
         }
-		assertArrayEquals(ufosPark.flota, ufos.flota);
-    	
+		assertArrayEquals(ufosPark.getFlota().toArray(), ovnis);
     }
 
     /**
@@ -32,6 +29,15 @@ public class UfosParkTest {
      */
     @Test
     public void dispatchTest() {
+    	UfosPark ufosPark = new UfosPark();
+		for (String ovni : ovnis) {
+			ufosPark.add(ovni);
+        }
+		CreditCard abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
+		ufosPark.dispatch(abradolph);
+    	assertEquals(abradolph.credit(), 2500d, 0d);
+    	String lista[] = {"dox", "trex"};
+    	assertArrayEquals(ufosPark.getFlota().toArray(), lista);
     }
 
     /**

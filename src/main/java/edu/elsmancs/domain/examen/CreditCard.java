@@ -20,5 +20,13 @@ public class CreditCard {
 	public String number() {
 		return this.number;
 	}
+	
+	public Double credit() {
+		return credit;
+	}
+	
+	public void setCredit(Double dinero) {
+		this.credit = this.credit - dinero;
+	}
 
 }
