@@ -11,11 +11,15 @@ public class CrystalExpender {
 	}
 
 	public void dispatch(CreditCard abradolph) {
-		if (abradolph.credit() > this.costeUnidad) {
+		if (abradolph.credit() > this.costeUnidad && this.unidadesTotales > 0) {
 			this.unidadesTotales = this.unidadesTotales - 1;
 			abradolph.setCredit(this.costeUnidad);
 		}
 		
+	}
+
+	public int stock() {
+		return this.unidadesTotales;
 	}
 
 }

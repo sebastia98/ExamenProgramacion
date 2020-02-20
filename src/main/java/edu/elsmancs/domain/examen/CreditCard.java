@@ -5,11 +5,17 @@ public class CreditCard {
 	private String owner = null;
 	private String number = null;
 	private Integer credit = 3000;
-	private String symbol = "EZIS";
+	private final String symbol = "EZIS";
 	
 	public CreditCard(String nombreInvitado, String tarjetaCredito) {
 		this.owner = nombreInvitado;
 		this.number = tarjetaCredito;
+	}
+	
+	public String toString() {
+		return "Owner: " + this.owner +
+				"\nnumber: " + this.number + 
+				"\ncredit: " + this.credit + " " + this.symbol;
 	}
 	
 	/*Getters para los casos test*/

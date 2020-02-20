@@ -20,5 +20,7 @@ public class Receptivo {
 		this.packExpender.dispatch(personaje);
 		this.nave.dispatch(personaje);
 	}
+	
+
 
 }
