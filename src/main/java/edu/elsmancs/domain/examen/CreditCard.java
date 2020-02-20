@@ -2,20 +2,23 @@ package edu.elsmancs.domain.examen;
 
 public class CreditCard {
 	
-	private String nombre = null;
-	private String numeroTarjeta = null;
-
+	private String owner = null;
+	private String number = null;
+	private Double credit = 3000.0;
+	private String symbol = "EZIS";
+	
+	
 	public CreditCard(String nombreInvitado, String tarjetaCredito) {
-		this.nombre = nombreInvitado;
-		this.numeroTarjeta = tarjetaCredito;
+		this.owner = nombreInvitado;
+		this.number = tarjetaCredito;
 	}
 	
 	/*Getters para los casos test*/
-	public String getNombre() {
-		return this.nombre;
+	public String getOwner() {
+		return this.owner;
 	}
-	public String getNumero() {
-		return this.numeroTarjeta;
+	public String number() {
+		return this.number;
 	}
 
 }
